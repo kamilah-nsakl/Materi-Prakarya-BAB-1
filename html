@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Prakarya Kelas VII • Bab I — Kerajinan dari Limbah Lunak</title>
+  <style>
+    :root{
+      --bg: #0b1020;
+      --bg2:#0a132a;
+      --card:#0f1a33cc;
+      --card2:#0f1a33;
+      --text:#eaf0ff;
+      --muted:#b8c3e6;
+      --line:#223058;
+      --accent:#7aa7ff;
+      --accent2:#7dffcd;
+      --danger:#ff6b7a;
+      --warn:#ffd36e;
+      --ok:#5dff9b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    [data-theme="light"]{
+      --bg: #f6f8ff;
+      --bg2:#eef3ff;
+      --card:#ffffffcc;
+      --card2:#ffffff;
+      --text:#0b1020;
+      --muted:#4c587a;
+      --line:#d8e0ff;
+      --accent:#2e67ff;
+      --accent2:#00a77b;
+      --shadow: 0 12px 28px rgba(24, 39, 75, .12);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 0%, rgba(122,167,255,.32), transparent 55%),
+        radial-gradient(900px 600px at 85% 20%, rgba(125,255,205,.20), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 90px}
+    .topbar{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(10,16,32,.75), rgba(10,16,32,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    [data-theme="light"] .topbar{
+      background: linear-gradient(180deg, rgba(246,248,255,.92), rgba(246,248,255,.65));
+      border-bottom:1px solid rgba(0,0,0,.08);
+    }
+    .topbar .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:240px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius:14px;
+      background: conic-gradient(from 200deg, var(--accent), var(--accent2), var(--accent));
+      box-shadow: var(--shadow);
+      position:relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:9px;
+      border-radius:12px;
+      background: rgba(10,16,32,.55);
+    }
+    [data-theme="light"] .logo:after{ background: rgba(246,248,255,.7); }
+    .brand h1{margin:0; font-size:14px; line-height:1.2}
+    .brand .sub{margin:0; font-size:12px; color:var(--muted)}
+    .controls{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+    .btn{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:14px;
+      box-shadow: none;
+      cursor:pointer;
+      display:inline-flex; align-items:center; gap:10px;
+      transition: transform .12s ease, background .12s ease, border .12s ease;
+      font-weight:650;
+      font-size:13px;
+    }
+    [data-theme="light"] .btn{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.70);
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10)}
+    [data-theme="light"] .btn:hover{background: rgba(255,255,255,.9)}
+    .btn .dot{
+      width:10px;height:10px;border-radius:999px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 6px rgba(125,255,205,.12);
+    }
+    .search{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      min-width: 220px;
+    }
+    [data-theme="light"] .search{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.70);
+    }
+    .search input{
+      width:100%;
+      border:0; outline:none;
+      background:transparent;
+      color:var(--text);
+      font-size:13px;
+    }
+    .search input::placeholder{color: rgba(184,195,230,.8)}
+    [data-theme="light"] .search input::placeholder{color: rgba(76,88,122,.8)}
+    .progress{
+      height:3px;
+      background: rgba(255,255,255,.10);
+      position:relative;
+    }
+    [data-theme="light"] .progress{background: rgba(0,0,0,.08)}
+    .progress > i{
+      display:block;
+      height:100%;
+      width:0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    .hero{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns: 1fr; }
+      .brand{min-width: unset}
+      .search{min-width: unset; flex:1}
+    }
+    .card{
+      background: var(--card);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    [data-theme="light"] .card{ border:1px solid rgba(0,0,0,.08); }
+    .card .pad{padding:18px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:7px 10px;
+      border-radius:999px;
+      background: rgba(122,167,255,.14);
+      border:1px solid rgba(122,167,255,.25);
+      color: var(--text);
+      font-weight:700;
+      font-size:12px;
+    }
+    .title{
+      margin:12px 0 8px;
+      font-size:28px;
+      line-height:1.15;
+      letter-spacing:-0.02em;
+    }
+    .desc{margin:0; color:var(--muted); font-size:14px; line-height:1.65}
+    .meta{
+      margin-top:14px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .pill{
+      font-size:12px;
+      color: var(--muted);
+      border:1px solid rgba(255,255,255,.12);
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.04);
+    }
+    [data-theme="light"] .pill{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.65);
+    }
+
+    .toc{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+    }
+    .toc h3{
+      margin:0;
+      font-size:14px;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+      color: var(--muted);
+    }
+    .toc nav{margin-top:12px; display:grid; gap:8px}
+    .toc a{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      transition: transform .12s ease, border .12s ease, background .12s ease;
+      font-weight:650;
+      font-size:13px;
+    }
+    [data-theme="light"] .toc a{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.7);
+    }
+    .toc a:hover{
+      transform: translateY(-1px);
+      border-color: rgba(122,167,255,.45);
+      background: rgba(122,167,255,.10);
+    }
+    .toc a small{color:var(--muted); font-weight:700}
+
+    section{margin-top:18px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .span-6{grid-column: span 6}
+    .span-7{grid-column: span 7}
+    .span-5{grid-column: span 5}
+    .span-12{grid-column: span 12}
+    @media (max-width: 920px){
+      .span-6,.span-7,.span-5{grid-column: span 12}
+    }
+
+    .h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-0.01em;
+    }
+    .h2row{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      margin-bottom:8px;
+    }
+    .tag{
+      font-size:11px; font-weight:800;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      white-space:nowrap;
+    }
+    [data-theme="light"] .tag{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.75);
+    }
+    .list{
+      margin:10px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    [data-theme="light"] .li{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.70);
+    }
+    .li .ic{
+      width:28px;height:28px;border-radius:12px;
+      background: rgba(122,167,255,.14);
+      border:1px solid rgba(122,167,255,.25);
+      display:grid; place-items:center;
+      flex:0 0 auto;
+    }
+    .li .ic svg{width:16px;height:16px}
+    .li b{display:block; margin-bottom:2px}
+    .li p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
+
+    details{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      border-radius: 18px;
+      overflow:hidden;
+    }
+    [data-theme="light"] details{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.72);
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding:14px 14px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      font-weight:800;
+    }
+    summary::-webkit-details-marker{display:none}
+    .sumleft{display:flex; align-items:center; gap:10px}
+    .caret{
+      width:34px;height:34px;border-radius:14px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      transition: transform .14s ease;
+      flex:0 0 auto;
+    }
+    [data-theme="light"] .caret{
+      background: rgba(255,255,255,.75);
+      border:1px solid rgba(0,0,0,.08);
+    }
+    details[open] .caret{transform: rotate(90deg)}
+    .detailbody{
+      padding: 0 14px 14px;
+      color: var(--muted);
+      font-size:13.5px;
+      line-height:1.7;
+    }
+    .twocol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+    @media (max-width: 720px){
+      .twocol{grid-template-columns: 1fr}
+    }
+    .box{
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding:12px;
+    }
+    [data-theme="light"] .box{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.75);
+    }
+    .box h4{margin:0 0 6px; font-size:13px; color:var(--text)}
+    .box ul{margin:0; padding-left:18px}
+    .box li{margin:4px 0}
+
+    .ribbon{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .chip{
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      font-size:13px;
+      color: var(--muted);
+      display:flex; gap:10px; align-items:flex-start;
+      flex:1 1 240px;
+      min-width: 240px;
+    }
+    [data-theme="light"] .chip{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.72);
+    }
+    .chip b{color:var(--text)}
+    .badge{
+      font-family: var(--mono);
+      font-size:12px;
+      font-weight:900;
+      padding:7px 9px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      flex:0 0 auto;
+    }
+    [data-theme="light"] .badge{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.82);
+    }
+    .b-reduce{border-color: rgba(122,167,255,.35)}
+    .b-reuse{border-color: rgba(125,255,205,.35)}
+    .b-recycle{border-color: rgba(255,211,110,.35)}
+    .b-upcycle{border-color: rgba(255,107,122,.35)}
+
+    .callout{
+      border-radius: var(--radius2);
+      padding:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background:
+        radial-gradient(400px 200px at 12% 0%, rgba(122,167,255,.20), transparent 60%),
+        radial-gradient(400px 200px at 86% 10%, rgba(125,255,205,.16), transparent 60%),
+        rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+    }
+    [data-theme="light"] .callout{
+      background:
+        radial-gradient(420px 240px at 12% 0%, rgba(46,103,255,.12), transparent 60%),
+        radial-gradient(420px 240px at 86% 10%, rgba(0,167,123,.10), transparent 60%),
+        rgba(255,255,255,.82);
+      border:1px solid rgba(0,0,0,.08);
+    }
+    .callout h3{margin:0 0 6px; font-size:16px}
+    .callout p{margin:0; color:var(--muted); line-height:1.7}
+    .small{font-size:12px; color:var(--muted)}
+    .footer{
+      margin-top:20px;
+      padding:16px;
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    [data-theme="light"] .footer{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.78);
+    }
+
+    .fab{
+      position:fixed;
+      right:16px; bottom:16px;
+      display:flex; flex-direction:column; gap:10px;
+      z-index:50;
+    }
+    .fab button{
+      width:46px;height:46px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      cursor:pointer;
+      box-shadow: var(--shadow);
+      display:grid; place-items:center;
+      transition: transform .12s ease, opacity .12s ease;
+      opacity:.92;
+    }
+    [data-theme="light"] .fab button{
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.85);
+    }
+    .fab button:hover{transform: translateY(-2px); opacity:1}
+
+    mark{
+      background: rgba(255,211,110,.25);
+      color: inherit;
+      padding: 0 .18em;
+      border-radius: .35em;
+    }
+
+    /* Print */
+    @media print{
+      .topbar,.fab{display:none!important}
+      body{background:#fff}
+      .card,.callout{box-shadow:none}
+      .wrap{padding:0 0 0}
+      a{color:#000}
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <header class="topbar">
+    <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+    <div class="inner">
+      <div class="brand" title="Materi Prakarya Kelas VII Semester 2">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Prakarya • Kelas VII • Semester 2</h1>
+          <p class="sub">Bab I — Kerajinan dari Limbah Lunak</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="search" role="search" aria-label="Cari di materi">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="q" type="search" placeholder="Cari: limbah, 3R, upcycle..." autocomplete="off" />
+        </div>
+
+        <button class="btn" id="toggleTheme" type="button" aria-label="Ganti tema">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="themeLabel">Dark</span>
+        </button>
+
+        <button class="btn" id="printBtn" type="button" aria-label="Cetak / Simpan PDF">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 8V3h10v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 17h10v4H7v-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M6 17H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Cetak
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <article class="card">
+        <div class="pad">
+          <span class="kicker">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            Materi Inti + Lengkap
+          </span>
+          <h2 class="title">Kerajinan dari Limbah Lunak</h2>
+          <p class="desc">
+            Siswa belajar memanfaatkan limbah lunak di sekitar menjadi produk kerajinan yang fungsional/estetis,
+            sambil menerapkan kepedulian lingkungan, kreativitas, dan langkah kerja sistematis (ide → desain → produksi → evaluasi).
+          </p>
+
+          <div class="meta">
+            <span class="pill"><b>Mata Pelajaran:</b> Prakarya / Art</span>
+            <span class="pill"><b>Kelas:</b> VII</span>
+            <span class="pill"><b>Semester:</b> 2 (Genap)</span>
+            <span class="pill"><b>TA:</b> 2025/2026</span>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card toc">
+        <div class="pad">
+          <h3>Daftar Isi</h3>
+          <nav aria-label="Daftar isi">
+            <a href="#cp"><span>Capaian Pembelajaran</span> <small>CP</small></a>
+            <a href="#tp"><span>Tujuan Pembelajaran</span> <small>TP</small></a>
+            <a href="#mengapa"><span>Mengapa Dipelajari?</span> <small>01</small></a>
+            <a href="#definisi"><span>Definisi Limbah & Limbah Lunak</span> <small>02</small></a>
+            <a href="#ciri"><span>Ciri Umum Limbah Lunak</span> <small>03</small></a>
+            <a href="#jenis"><span>Organik vs Anorganik</span> <small>04</small></a>
+            <a href="#prinsip"><span>Prinsip 3R + Upcycle</span> <small>05</small></a>
+            <a href="#kriteria"><span>Kriteria Memilih Bahan</span> <small>06</small></a>
+          </nav>
+          <p class="small" style="margin:12px 0 0;">
+            Tips: gunakan kolom cari untuk menemukan kata kunci cepat.
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- CP + TP -->
+    <section id="cp" class="grid">
+      <article class="card span-12">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Capaian Pembelajaran (CP)</h3>
+            <span class="tag">Kompetensi Umum</span>
+          </div>
+          <p class="desc" data-search>
+            Peserta didik mampu mengamati potensi bahan di lingkungan, merancang, membuat produk,
+            serta menilai/mempresentasikan karya secara bertanggung jawab. Ruang lingkup Prakarya mencakup:
+            kerajinan, rekayasa, budidaya, dan pengolahan.
+          </p>
+        </div>
+      </article>
+
+      <article id="tp" class="card span-12">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Tujuan Pembelajaran (TP)</h3>
+            <span class="tag">Target Bab I</span>
+          </div>
+
+          <ul class="list" aria-label="Tujuan Pembelajaran" data-search>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 6h16M4 12h10M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Memahami konsep</b>
+                <p>Menjelaskan pengertian <mark>limbah lunak</mark> dan contoh di sekitar.</p>
+              </div>
+            </li>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 7h7v7H4V7Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M13 10h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M13 14h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mengklasifikasikan bahan</b>
+                <p>Membedakan limbah lunak <mark>organik</mark> dan <mark>anorganik</mark> berdasarkan sumber & sifatnya.</p>
+              </div>
+            </li>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mengembangkan ide</b>
+                <p>Menentukan ide produk kerajinan yang <mark>fungsional/estetis</mark> dari limbah lunak.</p>
+              </div>
+            </li>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 16l4-4 3 3 5-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Merancang & mempraktikkan</b>
+                <p>Membuat rancangan, mempraktikkan pembuatan produk dengan teknik dasar.</p>
+              </div>
+            </li>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 3h12a2 2 0 0 1 2 2v14l-4-2-4 2-4-2-4 2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mengevaluasi & mempresentasikan</b>
+                <p>Menguji kualitas karya dan mempresentasikan hasilnya.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- Isi Bab -->
+    <section class="grid">
+      <article id="mengapa" class="card span-7">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Mengapa Limbah Lunak Dipelajari di Prakarya?</h3>
+            <span class="tag">Konteks</span>
+          </div>
+          <p class="desc" data-search>
+            Setiap hari kita menghasilkan sampah/limbah dari rumah dan sekolah. Sebagian besar berupa bahan yang
+            sebenarnya masih bisa dimanfaatkan, terutama bahan yang lunak (mudah dibentuk). Melalui Prakarya,
+            siswa belajar peduli lingkungan, kreatif dan produktif, berjiwa wirausaha, serta bekerja sistematis
+            dari ide sampai evaluasi.
+          </p>
+
+          <div class="ribbon" data-search>
+            <div class="chip">
+              <span class="badge b-reduce">🌿</span>
+              <div><b>Peduli lingkungan</b><br/>Mengurangi sampah dengan memanfaatkan kembali bahan lunak.</div>
+            </div>
+            <div class="chip">
+              <span class="badge b-reuse">💡</span>
+              <div><b>Kreatif & produktif</b><br/>Mengubah “sisa” jadi barang baru yang berguna.</div>
+            </div>
+            <div class="chip">
+              <span class="badge b-recycle">🧺</span>
+              <div><b>Berjiwa wirausaha</b><br/>Produk kerajinan bisa punya nilai jual.</div>
+            </div>
+            <div class="chip">
+              <span class="badge b-upcycle">🧭</span>
+              <div><b>Kerja sistematis</b><br/>Ide → desain → produksi → evaluasi/presentasi.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="definisi" class="card span-5">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Definisi Kunci</h3>
+            <span class="tag">Konsep</span>
+          </div>
+
+          <details open>
+            <summary>
+              <span class="sumleft">
+                <span class="badge b-recycle">LIMBAH</span>
+                <span data-search>Limbah</span>
+              </span>
+              <span class="caret" aria-hidden="true">›</span>
+            </summary>
+            <div class="detailbody" data-search>
+              Sisa/buangan dari suatu kegiatan atau proses yang tidak digunakan lagi oleh pemiliknya.
+            </div>
+          </details>
+
+          <div style="height:10px"></div>
+
+          <details>
+            <summary>
+              <span class="sumleft">
+                <span class="badge b-reuse">LUNAK</span>
+                <span data-search>Limbah lunak</span>
+              </span>
+              <span class="caret" aria-hidden="true">›</span>
+            </summary>
+            <div class="detailbody" data-search>
+              Limbah yang bertekstur lentur/fleksibel, relatif mudah dipotong, dilipat, dirangkai,
+              dianyam, dijahit, atau ditempel untuk dijadikan kerajinan.
+              <div class="twocol">
+                <div class="box">
+                  <h4>Teknik yang sering dipakai</h4>
+                  <ul>
+                    <li>Potong & lipat</li>
+                    <li>Tempel & rangkai</li>
+                    <li>Anyam sederhana</li>
+                    <li>Jahit / ikat</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <h4>Contoh produk</h4>
+                  <ul>
+                    <li>Hiasan dinding</li>
+                    <li>Dompet / pouch</li>
+                    <li>Tempat pensil</li>
+                    <li>Vas / bunga hias</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article id="ciri" class="card span-6">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Ciri Umum Limbah Lunak</h3>
+            <span class="tag">Checklist Cepat</span>
+          </div>
+
+          <ul class="list" data-search>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 14c2.5 0 2.5-4 5-4s2.5 4 5 4 2.5-4 5-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mudah berubah bentuk</b>
+                <p>Lebih fleksibel saat dibentuk menjadi kerajinan.</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M8 7h8M10 11h4M7 21h10l2-7H5l2 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M9 14V3h6v11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Alat sederhana</b>
+                <p>Bisa diproses dengan alat yang mudah ditemukan di rumah/sekolah.</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 10c4-6 12-6 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 14c3-4 9-4 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 18c2-2 6-2 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mudah ditemukan</b>
+                <p>Banyak terdapat di lingkungan sekitar (rumah, sekolah, pasar).</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s7-4 7-11a7 7 0 1 0-14 0c0 7 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M10 11h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Bernilai guna/estetika</b>
+                <p>Jika diolah ulang dapat menjadi barang fungsional atau estetis.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="jenis" class="card span-6">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Organik vs Anorganik</h3>
+            <span class="tag">Klasifikasi</span>
+          </div>
+
+          <details open>
+            <summary>
+              <span class="sumleft">
+                <span class="badge b-reuse">ORGANIK</span>
+                <span data-search>Limbah lunak organik (mudah terurai)</span>
+              </span>
+              <span class="caret" aria-hidden="true">›</span>
+            </summary>
+            <div class="detailbody" data-search>
+              Berasal dari makhluk hidup (tumbuhan/hewan) dan umumnya bisa lapuk/terurai oleh mikroorganisme.
+              <div class="box" style="margin-top:10px">
+                <h4>Contoh bahan</h4>
+                <ul>
+                  <li>Kulit jagung, pelepah pisang kering</li>
+                  <li>Daun kering tertentu</li>
+                  <li>Jerami, serat tanaman</li>
+                  <li>Serbuk/ampas bersih yang aman</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <div style="height:10px"></div>
+
+          <details>
+            <summary>
+              <span class="sumleft">
+                <span class="badge b-recycle">ANORGANIK</span>
+                <span data-search>Limbah lunak anorganik (sulit terurai)</span>
+              </span>
+              <span class="caret" aria-hidden="true">›</span>
+            </summary>
+            <div class="detailbody" data-search>
+              Berasal dari bahan buatan/pabrik atau bahan yang tidak mudah diuraikan.
+              <div class="box" style="margin-top:10px">
+                <h4>Contoh bahan</h4>
+                <ul>
+                  <li>Plastik kemasan/sachet, kantong plastik</li>
+                  <li>Sedotan</li>
+                  <li>Kain perca</li>
+                  <li>Pita plastik, banner/vinyl bekas (pilih yang aman)</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article id="prinsip" class="card span-12">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Prinsip Pengolahan Limbah (3R + Upcycle)</h3>
+            <span class="tag">Langkah Berpikir</span>
+          </div>
+
+          <div class="ribbon" data-search>
+            <div class="chip">
+              <span class="badge b-reduce">REDUCE</span>
+              <div><b>Mengurangi</b><br/>Mengurangi pemakaian barang sekali pakai.</div>
+            </div>
+            <div class="chip">
+              <span class="badge b-reuse">REUSE</span>
+              <div><b>Menggunakan kembali</b><br/>Memakai ulang tanpa mengubah bentuk besar-besaran.</div>
+            </div>
+            <div class="chip">
+              <span class="badge b-recycle">RECYCLE</span>
+              <div><b>Mendaur ulang</b><br/>Mengolah menjadi bahan/produk baru.</div>
+            </div>
+            <div class="chip">
+              <span class="badge b-upcycle">UPCYCLE</span>
+              <div><b>Nilai tambah</b><br/>Mengolah limbah jadi produk baru yang nilai guna/estetikanya naik (contoh: sachet jadi dompet rapi & kuat).</div>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top:14px" data-search>
+            <h3>Mini-Contoh (Supaya Kebayang)</h3>
+            <p>
+              <b>Upcycle</b> bukan sekadar “dipakai lagi”, tapi dibuat lebih rapi/kuat/menarik.
+              Misalnya: sachet bekas disusun pola anyam → dijahit → jadi pouch/dompet yang awet.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article id="kriteria" class="card span-12">
+        <div class="pad">
+          <div class="h2row">
+            <h3 class="h2">Kriteria Memilih Limbah untuk Kerajinan</h3>
+            <span class="tag">Safety & Kualitas</span>
+          </div>
+
+          <p class="desc" style="margin-bottom:10px" data-search>
+            Saat memilih bahan, gunakan checklist berikut agar produk aman, nyaman dipakai, dan hasilnya bagus.
+          </p>
+
+          <ul class="list" data-search>
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Aman</b>
+                <p>Tidak beracun, tidak tajam, tidak berjamur, tidak berbau menyengat.</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7c2-2 8-2 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 11c3-2 9-2 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 21c0-3 2-5 4-5s4 2 4 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 16V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Bersih</b>
+                <p>Bisa dicuci dan dikeringkan sebelum dipakai.</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M7 9l-3 3 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17 9l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Kuat sesuai fungsi</b>
+                <p>Ketebalan/kelenturan cukup untuk kegunaan produk (misal dompet harus kuat).</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 7h-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M14 3v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 7h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 3v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M4 21h16v-6H4v6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mudah didapat & konsisten</b>
+                <p>Bahan tidak langka; mudah dikumpulkan untuk produksi/latihan.</p>
+              </div>
+            </li>
+
+            <li class="li">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M10 22h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 2a7 7 0 0 0-4 12c.7.6 1 1.3 1 2h6c0-.7.3-1.4 1-2A7 7 0 0 0 12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>Mudah dibentuk</b>
+                <p>Sesuaikan dengan teknik: potong-lipat, anyam, jahit, tempel, rangkai.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="footer">
+            <div>
+              <b style="color:var(--text)">Pengampu:</b>
+              <span> Aulia Nisa Kamilah, S.Psi., CAIT.</span>
+            </div>
+            <div class="small">
+              Dibuat untuk presentasi materi Bab I (Prakarya Kelas VII Semester 2).
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Floating buttons -->
+  <div class="fab" aria-label="Aksi cepat">
+    <button id="toTop" type="button" title="Kembali ke atas" aria-label="Kembali ke atas">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="m6 11 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button id="expandAll" type="button" title="Buka/Tutup semua accordion" aria-label="Buka atau tutup semua accordion">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M8 7h12M8 12h12M8 17h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 7h.01M4 12h.01M4 17h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+        history.replaceState(null, '', id);
+      });
+    });
+
+    // Reading progress bar
+    const bar = document.getElementById('progressBar');
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      const p = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+      bar.style.width = p.toFixed(2) + '%';
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    // Theme toggle (persist in localStorage)
+    const root = document.body;
+    const themeBtn = document.getElementById('toggleTheme');
+    const themeLabel = document.getElementById('themeLabel');
+    const saved = localStorage.getItem('prakarya_theme');
+    if(saved){ root.setAttribute('data-theme', saved); themeLabel.textContent = saved === 'light' ? 'Light' : 'Dark'; }
+    themeBtn.addEventListener('click', ()=>{
+      const cur = root.getAttribute('data-theme') || 'dark';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      themeLabel.textContent = next === 'light' ? 'Light' : 'Dark';
+      localStorage.setItem('prakarya_theme', next);
+    });
+
+    // Print
+    document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+
+    // Back to top
+    document.getElementById('toTop').addEventListener('click', ()=>{
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+    // Expand/Collapse all details
+    const expandBtn = document.getElementById('expandAll');
+    let expanded = false;
+    expandBtn.addEventListener('click', ()=>{
+      const all = Array.from(document.querySelectorAll('details'));
+      expanded = !expanded;
+      all.forEach(d => d.open = expanded);
+    });
+
+    // Simple in-page search highlight
+    const q = document.getElementById('q');
+    const searchable = Array.from(document.querySelectorAll('[data-search]'));
+    const clearMarks = (el) => {
+      // remove <mark> we added (only those created by this script)
+      el.querySelectorAll('mark[data-hit="1"]').forEach(m=>{
+        const t = document.createTextNode(m.textContent);
+        m.replaceWith(t);
+      });
+    };
+    const markHits = (el, term) => {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+      const texts = [];
+      while(walker.nextNode()) texts.push(walker.currentNode);
+
+      texts.forEach(node=>{
+        const s = node.nodeValue;
+        const idx = s.toLowerCase().indexOf(term);
+        if(idx === -1) return;
+
+        const frag = document.createDocumentFragment();
+        let rest = s;
+        let lower = rest.toLowerCase();
+        while(true){
+          const i = lower.indexOf(term);
+          if(i === -1){
+            frag.appendChild(document.createTextNode(rest));
+            break;
+          }
+          if(i > 0) frag.appendChild(document.createTextNode(rest.slice(0,i)));
+          const hit = rest.slice(i, i + term.length);
+          const m = document.createElement('mark');
+          m.setAttribute('data-hit','1');
+          m.textContent = hit;
+          frag.appendChild(m);
+          rest = rest.slice(i + term.length);
+          lower = rest.toLowerCase();
+        }
+        node.replaceWith(frag);
+      });
+    };
+
+    let last = '';
+    q.addEventListener('input', ()=>{
+      const term = q.value.trim().toLowerCase();
+      if(term === last) return;
+      searchable.forEach(el => clearMarks(el));
+      if(term.length >= 2){
+        searchable.forEach(el => markHits(el, term));
+      }
+      last = term;
+    });
+  </script>
+</body>
+</html>
